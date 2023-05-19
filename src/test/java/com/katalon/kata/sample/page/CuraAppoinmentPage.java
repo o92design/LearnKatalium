@@ -54,6 +54,18 @@ public class CuraAppoinmentPage extends PageTemplate {
     readMissionCheck.click();
     visitDateInput.sendKeys(visitDate);
     commentInput.sendKeys(comment);
+  }
+
+  public void changeAppointmentDate(String visitDate) {
+    log.info("Change appointment date.");
+    waitUntil(ExpectedConditions.elementToBeClickable(visitDateInput));
+    visitDateInput.clear();
+    visitDateInput.sendKeys(visitDate);
+  }
+
+  public void bookAppointment() {
+    log.info("Book appointment.");
+    waitUntil(ExpectedConditions.elementToBeClickable(bookAppointmentBtn));
     bookAppointmentBtn.click();
   }
 }
