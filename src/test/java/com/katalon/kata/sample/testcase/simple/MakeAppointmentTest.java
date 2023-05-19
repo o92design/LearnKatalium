@@ -23,9 +23,9 @@ public class MakeAppointmentTest extends TestTemplate {
     curaHomePage.open();
     curaHomePage.makeAppointment();
     loginPage.login(Constants.username, Constants.password);
-    curaAppoinmentPage.fillAppointmentDetails("Hongkong CURA Healthcare Center", "27/12/2016",
+    curaAppoinmentPage.fillAppointmentDetails(Constants.facility, Constants.appointmentDate,
       "Please make appointment as soon as possible.");
-    curaAppointmentConfirmPage.checkInformation("Hongkong CURA Healthcare Center", "27/12/2016",
+    curaAppointmentConfirmPage.checkInformation(Constants.facility, Constants.appointmentDate,
       "Please make appointment as soon as possible.");
     driver.quit();
   }

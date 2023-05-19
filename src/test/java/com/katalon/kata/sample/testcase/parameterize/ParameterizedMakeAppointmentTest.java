@@ -6,6 +6,8 @@ import com.katalon.kata.sample.page.CuraAppointmentConfirmPage;
 import com.katalon.kata.sample.page.CuraHomePage;
 import com.katalon.kata.sample.page.CuraLoginPage;
 import com.katalon.kata.testng.TestTemplate;
+
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -21,7 +23,9 @@ public class ParameterizedMakeAppointmentTest extends TestTemplate {
 
   @Parameters({"facility", "visitDate", "comment"})
   @Test
-  public void shoudMakeAppointmentWithParameters(String facility, String visitDate, String comment) {
+  public void shoudMakeAppointmentWithParameters(@Optional(Constants.facility) String facility,
+                                                @Optional(Constants.appointmentDate) String visitDate,
+                                                @Optional("This is a default parameter comment") String comment) {
     log.info("Make appointment with parameters");
     log.info("Facility {}", facility);
     log.info("VisitDate {}", visitDate);

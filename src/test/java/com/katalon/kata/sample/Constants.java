@@ -2,7 +2,9 @@ package com.katalon.kata.sample;
 
 public class Constants {
 
-  public static String baseUrl = "http://demoaut.katalon.com";
-  public static String username = "John Doe";
-  public static String password = "ThisIsNotAPassword";
+  public static final String baseUrl = "http://demoaut.katalon.com";
+  public static final String facility = "Hongkong CURA Healthcare Center";
+  public static final String appointmentDate = "27/12/2016";
+  public static final String username = "John Doe";
+  public static final String password = "ThisIsNotAPassword";
 }
