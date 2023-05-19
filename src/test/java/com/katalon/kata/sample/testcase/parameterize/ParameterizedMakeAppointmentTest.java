@@ -25,7 +25,7 @@ public class ParameterizedMakeAppointmentTest extends TestTemplate {
   @Test
   public void shoudMakeAppointmentWithParameters(@Optional(Constants.facility) String facility,
                                                 @Optional(Constants.appointmentDate) String visitDate,
-                                                @Optional("This is a default parameter comment") String comment) {
+                                                @Optional("Please make appointment as soon as possible.") String comment) {
     log.info("Make appointment with parameters");
     log.info("Facility {}", facility);
     log.info("VisitDate {}", visitDate);
